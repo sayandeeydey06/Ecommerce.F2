@@ -37,7 +37,6 @@ import MalaCutPieceTabs from "./pages/MalaCutPieceTabs";
 
 import {
   PANCHPHORON_PRODUCTS,
-  MALA_CUT_PIECE_PRODUCTS,
   BIRYANI_PRODUCTS,
   MOMOS_PRODUCTS,
   BUSINESS_WHATSAPP,
