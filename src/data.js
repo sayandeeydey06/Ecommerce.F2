@@ -33,14 +33,14 @@ export const PANCHPHORON_PRODUCTS = [
     ]
   },
 
-   {
+  {
     id: "chicken-roll-001",
     name: "Chicken Roll",
     price: 60,
     image: "/products/chicken-roll.png",
-   },
+  },
 
-   {
+  {
     id: "veg-chowmein-001",
     name: "Veg Chowmein",
     price: 60,
@@ -49,9 +49,8 @@ export const PANCHPHORON_PRODUCTS = [
       { label: "Half Plate", price: 50 },
       { label: "Full Plate", price: 70 }
     ]
-   },
+  },
 ];
-
 
 
 export const MALA_CUT_PIECE_MEN = [
@@ -85,6 +84,11 @@ export const MALA_CUT_PIECE_WOMEN = [
 ];
 
 
+/* ✅ FIX ADDED — REQUIRED FOR VERCEL BUILD */
+export const MALA_CUT_PIECE_PRODUCTS = [
+  ...MALA_CUT_PIECE_MEN,
+  ...MALA_CUT_PIECE_WOMEN,
+];
 
 
 export const BIRYANI_PRODUCTS = [
@@ -111,18 +115,16 @@ export const BIRYANI_PRODUCTS = [
 ];
 
 
-
 export const MOMOS_PRODUCTS = [
   {
     id: "momos-001",
     name: "Chicken Momos",
     price: 80,
     image: "/products/momos.png",
-   variants: [
-  { label: "6 Pieces", price: 80 },
-  { label: "10 Pieces", price: 120 }
-]
-
+    variants: [
+      { label: "6 Pieces", price: 80 },
+      { label: "10 Pieces", price: 120 }
+    ]
   },
 
   {
@@ -130,14 +132,21 @@ export const MOMOS_PRODUCTS = [
     name: "Veg Momos",
     price: 80,
     image: "/products/veg-momos.png",
-   variants: [
-  { label: "6 Pieces", price: 80 },
-  { label: "10 Pieces", price: 120 }
-]
-
+    variants: [
+      { label: "6 Pieces", price: 80 },
+      { label: "10 Pieces", price: 120 }
+    ]
   }
 ];
 
 
-// ✅ Add this — REQUIRED
+// WhatsApp Business Number
 export const BUSINESS_WHATSAPP = "91XXXXXXXXXX";
+
+ 
+   
+
+
+
+
+
