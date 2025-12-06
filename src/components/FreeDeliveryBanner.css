@@ -1,0 +1,14 @@
+.car-animation {
+  display: inline-block;
+  position: relative;
+  animation: drive 4s linear infinite;
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translateX(80px);
+  }
+}
