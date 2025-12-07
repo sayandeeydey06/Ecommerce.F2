@@ -30,6 +30,10 @@ import { CouponProvider } from "./context/CouponContext";
 import CouponsPage from "./pages/Coupons";
 import MyCoupons from "./pages/MyCoupons";
 import MalaCutPieceTabs from "./pages/MalaCutPieceTabs";
+import PartnerShops from "./pages/PartnerShops";
+import PartnerWithFsquare from "./pages/PartnerWithFsquare";
+import FsquareRewards from "./pages/FsquareRewards";
+
 
 
 
@@ -37,7 +41,6 @@ import MalaCutPieceTabs from "./pages/MalaCutPieceTabs";
 
 import {
   PANCHPHORON_PRODUCTS,
-  MALA_CUT_PIECE_PRODUCTS,
   BIRYANI_PRODUCTS,
   MOMOS_PRODUCTS,
   BUSINESS_WHATSAPP,
@@ -54,7 +57,7 @@ function HomePage() {
   // Merge all product categories
   const allProducts = [
     ...PANCHPHORON_PRODUCTS.map((p) => ({ ...p, category: "Panchphoron" })),
-    ...MALA_CUT_PIECE_PRODUCTS.map((p) => ({ ...p, category: "Fashion" })),
+    
     ...BIRYANI_PRODUCTS.map((p) => ({ ...p, category: "Biryani" })),
     ...MOMOS_PRODUCTS.map((p) => ({ ...p, category: "Momos" })),
   ];
@@ -247,6 +250,41 @@ export default function App() {
     </ProtectedRoute>
   }
 />
+
+{/* FSQUARE Pages */}
+<Route
+  path="/partner-shops"
+  element={
+    <ProtectedRoute>
+      <PageWrapper>
+        <PartnerShops />
+      </PageWrapper>
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/partner-with-fsquare"
+  element={
+    <ProtectedRoute>
+      <PageWrapper>
+        <PartnerWithFsquare />
+      </PageWrapper>
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/fsquare-rewards"
+  element={
+    <ProtectedRoute>
+      <PageWrapper>
+        <FsquareRewards />
+      </PageWrapper>
+    </ProtectedRoute>
+  }
+/>
+
 
 
 
