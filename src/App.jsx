@@ -122,6 +122,10 @@ export default function App() {
         <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
         <Route path="/about-panchphoron" element={<PageWrapper><PanchphoronAbout /></PageWrapper>} />
         <Route path="/malakatpis-info" element={<PageWrapper><MalaKatPisInfo /></PageWrapper>} />
+        <Route path="/partner-shops" element={<ProtectedRoute><PageWrapper><PartnerShops /></PageWrapper></ProtectedRoute>} />
+<Route path="/partner-with-fsquare" element={<ProtectedRoute><PageWrapper><PartnerWithFsquare /></PageWrapper></ProtectedRoute>} />
+<Route path="/fsquare-rewards" element={<ProtectedRoute><PageWrapper><FsquareRewards /></PageWrapper></ProtectedRoute>} />
+
 
 
         {/* PROTECTED ROUTES */}
