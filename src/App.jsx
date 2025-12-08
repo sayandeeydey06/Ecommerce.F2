@@ -57,7 +57,6 @@ function HomePage() {
   // Merge all product categories
   const allProducts = [
     ...PANCHPHORON_PRODUCTS.map((p) => ({ ...p, category: "Panchphoron" })),
-
     ...BIRYANI_PRODUCTS.map((p) => ({ ...p, category: "Biryani" })),
     ...MOMOS_PRODUCTS.map((p) => ({ ...p, category: "Momos" })),
   ];
