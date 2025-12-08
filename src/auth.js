@@ -1,23 +1,26 @@
 // =============================
 // REGISTER USER
 // =============================
-export function registerUser(name, email, password) {
+// =============================
+// REGISTER USER (FULL FIX)
+// =============================
+export function registerUser(name, email, password, photo) {
   const users = JSON.parse(localStorage.getItem("users") || "[]");
 
   const exists = users.find((u) => u.email === email);
-  if (exists) return { success: false, message: "Email already registered!" };
+  if (exists) return false; // already exists
 
   const newUser = {
     name,
     email,
     password,
-    image: null, // default
+    image: photo || null,  // SAVE PHOTO CORRECTLY
   };
 
   users.push(newUser);
   localStorage.setItem("users", JSON.stringify(users));
 
-  return { success: true };
+  return true; // return boolean, not object
 }
 
 // =============================
@@ -28,10 +31,9 @@ export function loginUser(email, password) {
 
   const user = users.find((u) => u.email === email);
 
-  if (!user) return false;        // no such email
+  if (!user) return false; // email not found
   if (user.password !== password) return false; // wrong password
 
-  // Save logged-in user
   localStorage.setItem("user", JSON.stringify(user));
   return true;
 }
@@ -52,7 +54,7 @@ export function getUser() {
 }
 
 // =============================
-// UPDATE USER (SAFE UPDATE)
+// UPDATE USER
 // =============================
 export function updateUser(updatedUser) {
   const users = JSON.parse(localStorage.getItem("users") || "[]");
