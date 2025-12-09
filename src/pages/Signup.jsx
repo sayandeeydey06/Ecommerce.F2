@@ -36,6 +36,7 @@ export default function Signup() {
     } else {
       setError("User already exists.");
     }
+    
   };
 
   return (
@@ -75,7 +76,29 @@ export default function Signup() {
         />
 
         <label className="text-gray-700 dark:text-gray-300 block mb-2">Upload Profile Photo</label>
-        <input type="file" accept="image/*" onChange={handleImage} className="mb-4" />
+<input 
+  type="file" 
+  accept="image/*" 
+  onChange={(e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => setPhoto(reader.result);
+    reader.readAsDataURL(file);
+  }} 
+  className="mb-4" 
+/>
+
+/* PREVIEW IMAGE */
+{photo && (
+  <div className="flex justify-center mb-4">
+    <img 
+      src={photo} 
+      alt="Preview" 
+      className="w-24 h-24 rounded-full object-cover border shadow-md"
+    />
+  </div>
+)}
+
 
         {error && <p className="text-red-500 text-center mb-3">{error}</p>}
 
