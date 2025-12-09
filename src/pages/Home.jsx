@@ -91,7 +91,7 @@ export default function Home() {
 
             <div onClick={() => (window.location.href = "/malakatpis")} className="carousel-card">
               <span className="badge">✔ Verified</span>
-              <img src="/partners/malakatpis.png" className="partner-img" />
+              <img src="/partners/malakatpis.jpeg" className="partner-img" />
               <h3 className="title-pink">Mala Cut Piece Fashion</h3>
               <div className="rating-stars">★★★★★</div>
               <p className="desc">T-Shirts • Dresses • Fashion Wear</p>
