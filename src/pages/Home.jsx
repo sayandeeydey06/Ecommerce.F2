@@ -89,7 +89,7 @@ export default function Home() {
               <p className="desc">Rolls • Chowmein • Biryani</p>
             </div>
 
-            <div onClick={() => (window.location.href = "/malakatpis")} className="carousel-card">
+            <div onClick={() => (window.location.href = "/malakatpis-info")} className="carousel-card">
               <span className="badge">✔ Verified</span>
               <img src="/partners/malakatpis.jpeg" className="partner-img" />
               <h3 className="title-pink">Mala Cut Piece Fashion</h3>
