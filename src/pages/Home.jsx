@@ -15,52 +15,68 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Fix unwanted mobile top spacing */}
+<div className="h-2 sm:h-4"></div>
+
 
 
       
 
-
-      {/* =============================== */}
-      {/* PREMIUM HERO SECTION */}
-      {/* =============================== */}
       
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        {/* =============================== */}
+{/* PREMIUM HERO SECTION (FULLY RESPONSIVE + FIXED) */}
+{/* =============================== */}
 
-          
+<div className="mx-auto max-w-6xl px-4 pt-6 pb-10 sm:px-6 sm:pt-12 sm:pb-16 text-center">
 
-          {/* MAIN TITLE */}
-          <h1 className="mt-1 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-snug animate-fadeUp">
-            Everything You Need,
-            <span className="block mt-2">Delivered Near You</span>
-          </h1>
+  {/* FIX: Prevent extra top spacing on small phones */}
+  <div className="h-1 sm:h-2"></div>
 
-          {/* SUBTEXT */}
-          <p className="mt-3 sm:mt-5 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto animate-fadeUpDelay">
-            Order homemade foods & trendy fashion from trusted local shops.
-          </p>
+  {/* MAIN TITLE */}
+  <h1 className="mt-0 text-[26px] sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight animate-fadeUp">
+    Everything You Need,
+    <span className="block mt-1">Delivered Near You</span>
+  </h1>
 
-          {/* SEARCH BAR */}
-          <div className="mt-7 flex justify-center animate-scaleIn">
-            <input
-              type="text"
-              placeholder="Search food or fashion..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              onKeyDown={handleSearch}
-              className="w-full max-w-sm sm:max-w-md px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 shadow-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
+  {/* SUBTEXT */}
+  <p className="mt-3 sm:mt-5 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto animate-fadeUpDelay">
+    Order homemade foods & trendy fashion from trusted local shops.
+  </p>
 
-          {/* QUICK CATEGORIES */}
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 animate-fadeUpSlow">
-            <a href="/panchphoron" className="premium-btn">🍱 Food</a>
-            <a href="/malakatpis" className="premium-btn">👗 Fashion</a>
-            <a href="/biryani" className="premium-btn">🍛 Biryani</a>
-            <a href="/momos" className="premium-btn">🥟 Momos</a>
-          </div>
+  {/* SEARCH BAR */}
+  <div className="mt-6 flex justify-center animate-scaleIn">
+    <input
+      type="text"
+      placeholder="Search food or fashion..."
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      onKeyDown={handleSearch}
+      className="
+        w-full 
+        max-w-[90%] 
+        sm:max-w-md 
+        px-4 py-3 
+        rounded-xl 
+        border border-gray-300 dark:border-gray-600 
+        shadow-sm 
+        text-gray-800 
+        focus:outline-none 
+        focus:ring-2 
+        focus:ring-indigo-500
+      "
+    />
+  </div>
 
+  {/* QUICK CATEGORIES */}
+  <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 animate-fadeUpSlow">
+    <a href="/panchphoron" className="premium-btn">🍱 Food</a>
+    <a href="/malakatpis" className="premium-btn">👗 Fashion</a>
+    <a href="/biryani" className="premium-btn">🍛 Biryani</a>
+    <a href="/momos" className="premium-btn">🥟 Momos</a>
+  </div>
 
-        </div>
+</div>
+
         
 
 
