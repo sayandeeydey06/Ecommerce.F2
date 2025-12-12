@@ -33,6 +33,9 @@ import MalaCutPieceTabs from "./pages/MalaCutPieceTabs";
 import PartnerShops from "./pages/PartnerShops";
 import PartnerWithFsquare from "./pages/PartnerWithFsquare";
 import FsquareRewards from "./pages/FsquareRewards";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminRoute from "./components/AdminRoute";
 
 
 
@@ -125,6 +128,8 @@ export default function App() {
         <Route path="/partner-shops" element={<ProtectedRoute><PageWrapper><PartnerShops /></PageWrapper></ProtectedRoute>} />
 <Route path="/partner-with-fsquare" element={<ProtectedRoute><PageWrapper><PartnerWithFsquare /></PageWrapper></ProtectedRoute>} />
 <Route path="/fsquare-rewards" element={<ProtectedRoute><PageWrapper><FsquareRewards /></PageWrapper></ProtectedRoute>} />
+<Route path="/admin-login" element={<AdminLogin />} />
+
 
 
 
@@ -287,6 +292,15 @@ export default function App() {
     </ProtectedRoute>
   }
 />
+
+<Route
+  path="/admin"
+  element={
+    <AdminRoute>
+      <AdminDashboard />
+    </AdminRoute>
+  }
+/>      
 
 
 
