@@ -29,22 +29,21 @@ export default function Home() {
 
 <div className="mx-auto max-w-6xl px-4 pt-6 pb-10 sm:px-6 sm:pt-12 sm:pb-16 text-center">
 
-  {/* FIX: Prevent extra top spacing on small phones */}
   <div className="h-1 sm:h-2"></div>
 
   {/* MAIN TITLE */}
-  <h1 className="mt-0 text-[26px] sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight animate-fadeUp">
+  <h1 className="mt-0 text-[26px] sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
     Everything You Need,
     <span className="block mt-1">Delivered Near You</span>
   </h1>
 
   {/* SUBTEXT */}
-  <p className="mt-3 sm:mt-5 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto animate-fadeUpDelay">
+  <p className="mt-3 sm:mt-5 text-base sm:text-lg text-gray-700 max-w-xl mx-auto">
     Order homemade foods & trendy fashion from trusted local shops.
   </p>
 
   {/* SEARCH BAR */}
-  <div className="mt-6 flex justify-center animate-scaleIn">
+  <div className="mt-6 flex justify-center">
     <input
       type="text"
       placeholder="Search food or fashion..."
@@ -57,9 +56,9 @@ export default function Home() {
         sm:max-w-md 
         px-4 py-3 
         rounded-xl 
-        border border-gray-300 dark:border-gray-600 
+        border border-gray-300
         shadow-sm 
-        text-gray-800 
+        text-gray-900
         focus:outline-none 
         focus:ring-2 
         focus:ring-indigo-500
@@ -68,7 +67,7 @@ export default function Home() {
   </div>
 
   {/* QUICK CATEGORIES */}
-  <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 animate-fadeUpSlow">
+  <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
     <a href="/panchphoron" className="premium-btn">🍱 Food</a>
     <a href="/malakatpis" className="premium-btn">👗 Fashion</a>
     <a href="/biryani" className="premium-btn">🍛 Biryani</a>
@@ -76,6 +75,7 @@ export default function Home() {
   </div>
 
 </div>
+
 
         
 

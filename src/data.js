@@ -58,7 +58,7 @@ export const MALA_CUT_PIECE_MEN = [
     id: "men1",
     name: "Men's Premium T-Shirt",
     price: 299,
-    img: "/products/mala-men-1.jpg",
+    img: "/products/hoodie-black.png",
   },
   {
     id: "men2",
