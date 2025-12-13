@@ -56,10 +56,11 @@ export const PANCHPHORON_PRODUCTS = [
 export const MALA_CUT_PIECE_MEN = [
   {
     id: "men1",
-    name: "Men's Premium T-Shirt",
-    price: 299,
-    img: "/products/hoodie-black.png",
+    name: "Men's Black Hoodie",
+    price: 799,
+    image: "/products/hoodie-black.png",  // FIXED KEY NAME
   },
+
   {
     id: "men2",
     name: "Men's Oversized Tee",
